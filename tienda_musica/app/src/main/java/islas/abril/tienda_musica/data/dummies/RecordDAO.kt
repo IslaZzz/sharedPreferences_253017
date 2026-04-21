@@ -62,6 +62,7 @@ class RecordDAO(private val dbHelper: DatabaseHelper) {
     fun getRecordByID(recordId: Int): musicRecord? {
 
         val db = dbHelper.readableDatabase
+        var recordList =
         val cursor = db.query(
             RecordsEntry.TABLE_NAME,
             arrayOf(
